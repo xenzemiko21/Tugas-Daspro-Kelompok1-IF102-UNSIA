@@ -15,8 +15,8 @@ class GameView:
     }
     
     @staticmethod
-    def clear():
-        os.system('cls' if os.name == 'nt' else 'clear')    # Clear terminal
+    def clear():                                            # Clear screen terminal
+        os.system('cls' if os.name == 'nt' else 'clear')    
         
     def print_color(self, text, color):                     # Print dengan warna
         color_code = self.COLORS.get(color.upper(), '')
@@ -183,4 +183,5 @@ class GameView:
         self.clear()
         self.show_title("TERIMA KASIH")
         self.print_color("\nTerima kasih telah bermain!", 'yellow')
+
         self.print_color("Sampai jumpa lagi! 👋\n", 'blue')
